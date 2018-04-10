@@ -1,0 +1,68 @@
+######Exercise1
+參考老師上課內容
+================================================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int NUMBER_OF_ELEMENTS = 5; //平均值的元素數量
+  double numbers[NUMBER_OF_ELEMENTS];
+  double sum = 0;
+
+  for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
+  {
+    cout << "Enter a new number: ";
+    cin >> numbers[i];
+    sum += numbers[i];
+  }
+
+  double average = sum / NUMBER_OF_ELEMENTS;
+
+  int count = 0; // 這邊是要找高於平均值的數字數量
+  for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
+    if (numbers[i] > average)
+      count++;
+
+  cout << "Average is " << average << endl;
+  cout << "Number of elements above the average " << count << endl;
+  system("pause");
+  return 0;
+}
+平均數字跟高於平均值數量的程式碼
+================================================================
+######Exercise2
+參考老師上課的內容
+================================================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int NUMBER_OF_ELEMENTS = 5;
+  double numbers[NUMBER_OF_ELEMENTS];
+  double sum = 0;
+
+  for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
+  {
+    cout << "Enter a new number: ";
+    cin >> numbers[i];
+    sum += numbers[i];
+  }
+
+  double average = sum / NUMBER_OF_ELEMENTS;
+
+  int count = 0; // The number of elements above average
+  for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
+    if (numbers[i] > average)
+      count++;
+
+  cout << "Average is " << average << endl;
+  cout << "Number of elements above the average " << count << endl;
+  system("pause");
+  return 0;
+}
+平均數字跟高於平均值數量還有加上平方過後的平均數字跟高於平方平均後數字的數量的程式碼
+
+================================================================
+######Exercise3
