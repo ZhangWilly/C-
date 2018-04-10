@@ -30,7 +30,6 @@ int main()
   return 0;
 }
 平均數字跟高於平均值數量的程式碼
-![image](https://github.com/ZhangWilly/Image/blob/master/one.png)
 ================================================================
 ######Exercise2
 參考老師上課的內容
@@ -64,6 +63,5 @@ int main()
   return 0;
 }
 平均數字跟高於平均值數量還有加上平方過後的平均數字跟高於平方平均後數字的數量的程式碼
-![image](https://github.com/ZhangWilly/Image/blob/master/Newone.png)
 ================================================================
 ######Exercise3
