@@ -1,0 +1,24 @@
+1+3+.....+
+========================================================
+"C"
+
+#include <stdio.h>
+#include<stdlib.h>
+int fuc(int n){
+	if (n==1) {
+    printf("1=");
+    return 1;
+    } 	
+	else{ 
+  printf("%d+",n);
+	return n+fuc(n-2);} 
+}
+int main (){
+ printf("請輸入一整數:");
+ int n ;
+ scanf("%d",&n); 
+ printf("%d\n",fuc(2*(n-1)+1));
+system("pause");
+return 0;
+}
+========================================================
