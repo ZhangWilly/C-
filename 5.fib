@@ -1,0 +1,45 @@
+fib
+========================================================
+# include <stdlib.h>
+# include <stdio.h>
+
+int main(){
+
+    int n, i, n2=0, n1=1, fib;
+
+    while(1){
+
+        
+        printf("輸入一數字\n");
+        scanf("%d", &n);
+        printf("\n");
+
+        if (n == 0)
+            fib = n2;
+
+        else if (n == 1)
+            fib = n1;
+
+        else{
+
+            for (i=2; i<=n; i++) {
+                fib = n2 + n1;
+                n2 = n1;
+                n1 = fib;
+            }
+
+            n2 = 0;
+            n1 = 1;
+
+        }
+
+        printf("此項為: %d\n\n", fib);
+
+        system("pause");
+
+
+ }
+
+
+}
+========================================================
