@@ -1,0 +1,61 @@
+有1、2、3、4個數字，能組成多少個互不相同且無重複數字的三位元數？都是多少？
+========================================================
+"C"
+
+#include<stdio.h> 
+#include<stdlib.h> 
+int main (){
+
+int i,j,k; 
+printf("1、2、3、4個數字，能組成多少互不相同且無重複數字的三位元數？\n");
+for (i=1;i<5;i++){
+	for (j=1;j<5;j++){
+		if (i==j)
+		continue;
+		for (k=1;k<5;k++){
+			if (i==k || j==k)
+			continue;
+		printf("%d%d%d\n",i,j,k);
+}}}
+system("pause");
+return 0;
+}
+========================================================
+"C++"
+
+#include <iostream>
+using namespace std;
+ 
+int main ()
+{
+cout <<"1、2、3、4個數字，能組成多少個互不相同且無重複數字的三位元數？"<<endl;
+for (int i=1;i<5;i++){
+	for (int j=1;j<5;j++){
+		if (i==j)
+		continue;
+		for (int k=1;k<5;k++){
+			if (i==k || j==k)
+			continue;
+		cout<< i<<j<<k<<endl;
+}}}
+   return 0;
+}
+========================================================
+"Java"
+
+package Exercise;
+
+public class Exercise_2 {
+	public static void main(String[] args) {
+	System.out.println("1、2、3、4個數字，能組成多少個互不相同且無重複數字的三位元數？");
+	for (int i=1;i<5;i++){
+		for (int j=1;j<5;j++){
+			if (i==j)
+			continue;
+			for (int k=1;k<5;k++){
+				if (i==k || j==k)
+				continue;
+	System.out.printf("%d%d%d\n",i,j,k); //(★1?)
+	}
+ }
+========================================================
