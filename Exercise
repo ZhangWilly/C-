@@ -124,6 +124,56 @@ int main()
 }
 先印出陣列123456789,利用副函式 產生對角交換的功用
 ================================================================
-######Exercise5
-
+######Exercise5(4月17號)
+參考老師上課的內容
+================================================================
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	char array[12];
+	array[0]='a';
+	array[1]='b';
+	array[2]='b';
+	printf("%s\n",array);
+    return 0;
+}
+字元陣列存了3個分別為abb後面宣告，輸出後只會顯示"abb"。
+================================================================
+######Exercise6(4月17號)
+參考老師上課的內容
+================================================================
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i;
+	char array[12]={'H','E','L','L','O',' ','W','O','R','L','D'};
+	for(i=0;i<12;i++)
+		cout<<array[i];
+	cout << endl;
+    return 0;
+}
+在原先的字元陣列裡面放入HELLO WORLD，並用迴圈把陣列裡的字元一個字元一個字元的輸出。
+================================================================
+######Exercise7(4月17號)
+參考老師上課的內容
+================================================================
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	char str1[30],str2[20];
+	cout<<"please input string1:"<< endl;
+	gets(str1);
+	cout<<"please input string2:"<<endl;
+	gets(str2);
+//	strcat(str1,str2);
+	cout <<"Now the string1 is:"<<endl;
+	puts(str1);
+    return 0;
+}
+要求使用者輸入兩次字串，結果再顯示一次第一個字串。
 ================================================================
