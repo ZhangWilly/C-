@@ -71,17 +71,17 @@ int main()
 using namespace std;
 int main()
 {
-	int i,a[10];
+	int math,matha[10];
 
-	for(i=0;i<10;i++)
-		a[i]=i;
+	for(math=0;math<10;math++)
+		matha[math]=math;
 
-	for(i=0;i<10;i++)
-		cout << a[i] << endl;
+	for(math=0;math<10;math++)
+		cout << matha[math] << endl;
 		
     return 0;
 }
-用迴圈把數字存入a陣列中並印出
+用迴圈把數字存入matha陣列中並印出
 ================================================================
 ######Exercise4(4月17號)
 參考老師上課的內容
