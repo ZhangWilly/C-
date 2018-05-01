@@ -177,7 +177,7 @@ int main()
 }
 要求使用者輸入兩次字串，結果再顯示一次第一個字串。
 ================================================================
-######Exercise7(5月1號)
+######Exercise8(5月1號)
 參考老師上課的內容
 ================================================================
 #include<iostream>
@@ -192,4 +192,83 @@ int main()
 	return 0;
 }
 ================================================================
+######Exercise9(5月1號)
+參考老師上課的內容
+================================================================
+#include <iostream>
+using namespace std;
 
+
+
+int main()
+{
+	string s1("Welcome");
+s1.append(" to CPP"); 
+cout << s1 << endl; 
+
+string s2("Welcome");
+s2.append(" to C and Cpp", 3, 6); 
+cout << s2 << endl;
+	
+string s3("Welcome");
+s3.append(" to C and Cpp", 7); 
+cout << s3 << endl; 
+
+string s4("Welcome"); 
+s4.append(14, 'F'); 
+cout << s4 << endl; 
+	
+}
+================================================================
+######Exercise10(5月1號)
+參考老師上課的內容
+================================================================
+#include <iostream>
+using namespace std;
+
+class ball
+{
+public:
+  // The radius of this circle
+  double radius;
+
+  // Construct a default circle object
+  ball()
+  {
+    radius = 1;
+  }
+
+  // Construct a circle object
+  ball(double newRadius)
+  {
+    radius = newRadius;
+  }
+
+  // Return the area of this circle
+  double getball()
+  {
+    return 4*radius * radius * 3.14159;
+  }
+};  // Must place a semicolon here
+
+int main()
+{
+  ball ball1(1.0);
+  ball ball2(25);
+  ball ball3(125);
+
+  cout << "The ball of the circle of radius "
+    << ball1.radius << " is " << ball1.getball() << endl;
+  cout << "The ball of the circle of radius "
+    << ball2.radius << " is " << ball2.getball() << endl;
+  cout << "The ball of the circle of radius "
+    << ball3.radius << " is " << ball3.getball() << endl;
+
+  // Modify circle radius
+  ball2.radius = 100;
+  cout << "The ball of the circle of radius "
+    << ball2.radius << " is " << ball2.getball () << endl;
+
+  return 0;
+} 
+================================================================
