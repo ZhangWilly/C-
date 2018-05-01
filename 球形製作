@@ -1,22 +1,23 @@
 球形製作
+4060E011 張智崴
 
 #include <iostream>
 using namespace std;
 
-class Circle
+class ball
 {
 public:
   // The radius of this circle
   double radius;
 
   // Construct a default circle object
-  Circle()
+  ball()
   {
     radius = 1;
   }
 
   // Construct a circle object
-  Circle(double newRadius)
+  ball(double newRadius)
   {
     radius = newRadius;
   }
@@ -30,21 +31,21 @@ public:
 
 int main()
 {
-  Circle circle1(1.0);
-  Circle circle2(25);
-  Circle circle3(125);
+  ball ball1(1.0);
+  ball ball2(25);
+  ball ball3(125);
 
   cout << "The ball of the circle of radius "
-    << circle1.radius << " is " << circle1.getball() << endl;
+    << ball1.radius << " is " << ball1.getball() << endl;
   cout << "The ball of the circle of radius "
-    << circle2.radius << " is " << circle2.getball() << endl;
+    << ball2.radius << " is " << ball2.getball() << endl;
   cout << "The ball of the circle of radius "
-    << circle3.radius << " is " << circle3.getball() << endl;
+    << ball3.radius << " is " << ball3.getball() << endl;
 
   // Modify circle radius
-  circle2.radius = 100;
+  ball2.radius = 100;
   cout << "The ball of the circle of radius "
-    << circle2.radius << " is " << circle2.getball () << endl;
+    << ball2.radius << " is " << ball2.getball () << endl;
 
   return 0;
 } 
