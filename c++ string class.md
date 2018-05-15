@@ -117,13 +117,13 @@ int main()
  
    //  front return first character and back returns last charcter
    
-    //  of string
+   //  of string
  
    char ch_f = str6.front();  // Same as "ch_f = str6[0];"
    
    char ch_b = str6.back();   // Same as below
     
-                              // "ch_b = str6[str6.length() - 1];"
+   // "ch_b = str6[str6.length() - 1];"
 
    cout << "First char is : " << ch_f << ", Last char is : "<< ch_b << endl;
    
