@@ -33,55 +33,56 @@ end()
 replace()
 
 find()
-{
+
 // C++ program to demonstrate various function string class
-#include <bits/stdc++.h>
-using namespace std;
+#include <bits/stdc++.h> //載入資料庫
+using namespace std; //使用名稱空間
  
 int main()
 {
-    // various constructor of string class
+    // various constructor建構子 of string class 不同的建構子
  
     // initialization by raw string
-    string str1("first string");
+    string str1("first string"); // 字串1 first string
  
     // initialization by another string
-    string str2(str1);
+    string str2(str1); //字串2 = 字串1(first string)
  
     // initialization by character with number of occurence
-    string str3(5, '#');
+    string str3(5, '#'); // 字串3 = #####(5個)
  
     // initialization by part of another string
-    string str4(str1, 6, 6); // from 6th index (second parameter)
-                             // 6 characters (third parameter)
+    string str4(str1, 6, 3); // from 6th index (second parameter) // 字串4 = 字串1 第六個數字後的三個字(str)
+                             // 6 characters (third parameter)
  
     // initialization by part of another string : iteartor version
-    string str5(str2.begin(), str2.begin() + 5);
+    string str5(str2.begin(), str2.begin() + 5); //字串5 = 取字串2一開始的字串,取前五個數字
  
-    cout << str1 << endl;
-    cout << str2 << endl;
-    cout << str3 << endl;
-    cout << str4 << endl;
-    cout << str5 << endl;
+    cout << str1 << endl; //列印 first string
+    cout << str2 << endl; //列印 first string
+    cout << str3 << endl; //列印 #####
+    cout << str4 << endl; //列印 str
+    cout << str5 << endl; //列印 first
  
     //  assignment operator
-    string str6 = str4;
+    string str6 = str4; //把字串4的長度給到了字串6
  
     // clear function deletes all character from string
-    str4.clear();
+    str4.clear(); //字串4清除
  
     //  both size() and length() return length of string and
     //  they work as synonyms
-    int len = str6.length(); // Same as "len = str6.size();"
+    int len = str6.length(); // Same as "len = str6.size();" //把字串6的長度數字(6)給到了整數len
+   
  
-    cout << "Length of string is : " << len << endl;
+    cout << "Length of string is : " << len << endl; // 列印Length of string is : 6
  
     // a particular character can be accessed using at /
     // [] operator
-    char ch = str6.at(2); //  Same as "ch = str6[2];"
+    char ch = str6.at(2); //  Same as "ch = str6[2];" //把字串6的第2個數字開始算(r) 因為是從0開始算所以第三個是第二個數字
  
  
-    cout << "third character of string is : " << ch << endl;
+    cout << "third character of string is : " << ch << endl; //列印 third character of string is : r
  
     //  front return first character and back returns last charcter
     //  of string
@@ -143,4 +144,4 @@ int main()
  
     return 0;
 }
-}
+
