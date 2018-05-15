@@ -372,4 +372,82 @@ return 0;
 
 ![image](/PIC/string4.png "image")
 ================================================================
+######Exercise14:函數使用與呼叫(5月8號)
+老師上課內容
+================================================================
+#include <iostream>
+using namespace std;
 
+void hello();
+void old();
+void number();
+
+int main(void)
+{
+    hello();
+    old();
+    number();
+
+    return 0;
+}
+
+void hello()
+{
+    cout << "Willy ";
+}
+
+void old()
+{
+    cout << " 現在 18 歲 ";
+}
+
+void number()
+{
+    cout << "學號:4060E011" << endl;
+}
+================================================================
+######Exercise15:文件處理(5月8號)
+老師上課內容
+================================================================
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(void)
+{
+	ofstream output("TEST.txt");
+
+	output << "Hello" << " " << "World" << " " << "20" << endl;
+	output << "Welcome" << " " << "CPP" << " " << "10" << endl;
+
+	output.close();
+
+	system("pause");
+	return 0;
+}
+================================================================
+######Exercise16:字串處理(5月8號)
+老師上課內容
+================================================================
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(void)
+{
+  string str;
+  string str2="Welcome ";
+  string str3="print 10 and then 5 more";
+
+  str.append(str2);                       
+  str.append(str3,9,4);                   
+  str.append("dots are cool",9);          
+  str.append("here: ");                   
+  str.append(8u,'.');                    
+  str.append(str3.begin()+8,str3.end());  
+  str.append<int>(5,0x2E);                
+
+  cout << str << '\n';
+
+  return 0;
+}
