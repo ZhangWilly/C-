@@ -333,113 +333,189 @@ puts(str1);
 ================================================================
 
 #include<iostream>
+	
 using namespace std;
+
 int main()
+
 {
-	char c1,c2;
-	c1='a';
-	c2='b'; 
-	int i1,i2;
-	printf("%c,%d\n%c,%d",c1,c1,c2,c2);
-	return 0;
+
+char c1,c2;
+	
+c1='a';
+	
+c2='b'; 
+	
+int i1,i2;
+	
+printf("%c,%d\n%c,%d",c1,c1,c2,c2);
+	
+return 0;
+	
 }
+
 ================================================================
+
 ######Exercise9(5月1號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include <iostream>
+	
 using namespace std;
 
 
 
 int main()
+
 {
-	string s1("Welcome");
+
+string s1("Welcome");
+	
 s1.append(" to CPP"); 
+
 cout << s1 << endl; 
 
 string s2("Welcome");
+
 s2.append(" to C and Cpp", 3, 6); 
+
 cout << s2 << endl;
 	
 string s3("Welcome");
+
 s3.append(" to C and Cpp", 7); 
+
 cout << s3 << endl; 
 
 string s4("Welcome"); 
+
 s4.append(14, 'F'); 
+
 cout << s4 << endl; 
 	
 }
 可以藉由append來取代一般字串的麻煩之處
+
 s1：將s字串附加於this字串物件。[+append(s: string): string]
+
 s2：將s字串的index位置開始n個字元，附加於this字串上。[+append(s: string, index: int, n: int): string]
+
 s3：將s字串的前n個字元，附加於this字串上。[+append(s: string, n: int): string]
+
 s4：將ch字元拷貝n次，然後附加於this字串。[+append(n: int, ch: char): string]
+
 (參考課本C++程式設計導論內容!)
 
 ================================================================
+
 ######Exercise10(5月1號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include <iostream>
+	
 using namespace std;
 
+
 class ball
+
 {
+
 public:
+
   // The radius of this circle
+  
   double radius;
+  
 
   // Construct a default circle object
+  
   ball()
+  
   {
-    radius = 1;
+  
+   radius = 1;
+    
   }
 
   // Construct a circle object
+  
   ball(double newRadius)
+  
   {
-    radius = newRadius;
+  
+   radius = newRadius;
+    
   }
 
   // Return the area of this circle
+  
   double getball()
+  
   {
-    return 4*radius * radius * 3.14159;
+  
+   return 4*radius * radius * 3.14159;
+    
   }
+  
 };  // Must place a semicolon here
 
 int main()
+
 {
+
   ball ball1(1.0);
+  
   ball ball2(25);
+  
   ball ball3(125);
+  
 
   cout << "The ball of the circle of radius "
-    << ball1.radius << " is " << ball1.getball() << endl;
+  
+   << ball1.radius << " is " << ball1.getball() << endl;
+    
   cout << "The ball of the circle of radius "
-    << ball2.radius << " is " << ball2.getball() << endl;
+  
+   << ball2.radius << " is " << ball2.getball() << endl;
+   
   cout << "The ball of the circle of radius "
-    << ball3.radius << " is " << ball3.getball() << endl;
+  
+   << ball3.radius << " is " << ball3.getball() << endl;
 
   // Modify circle radius
+  
   ball2.radius = 100;
+  
   cout << "The ball of the circle of radius "
-    << ball2.radius << " is " << ball2.getball () << endl;
+  
+   << ball2.radius << " is " << ball2.getball () << endl;
 
   return 0;
+  
 } 
 
 ================================================================
+
 ######Exercise11(5月1號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include <iostream>
+	
 #include <string>
 
 int main ()
+
 {
+
   std::string str;
   
   std::string str2="Writing ";
@@ -470,8 +546,11 @@ int main ()
   
 }
 ================================================================
+
 ######Exercise12(5月1號)
+
 作業參考
+
 ================================================================
 #include <iostream>
 	
@@ -480,6 +559,7 @@ int main ()
 using namespace std;
 
 int main ()
+
 {
 
 string city;
@@ -522,89 +602,145 @@ return 0;
 }
 
 ![image](/PIC/string4.png "image")
+
 ================================================================
+
 ######Exercise14:函數使用與呼叫(5月8號)
+
 老師上課內容
+
 ================================================================
 #include <iostream>
+	
 using namespace std;
 
 void hello();
+
 void old();
+
 void number();
 
-int main(void)
-{
-    hello();
-    old();
-    number();
 
-    return 0;
+int main(void)
+
+{
+
+   hello();
+    
+   old();
+    
+   number();
+
+   return 0;
 }
 
 void hello()
+
 {
-    cout << "Willy ";
+
+   cout << "Willy ";
+    
 }
 
 void old()
+
 {
-    cout << " 現在 18 歲 ";
+
+   cout << " 現在 18 歲 ";
+    
 }
 
 void number()
+
 {
-    cout << "學號:4060E011" << endl;
+
+   cout << "學號:4060E011" << endl;
+    
 }
+
 ================================================================
+
 ######Exercise15:文件處理(5月8號)
+
 老師上課內容
+
 ================================================================
+
 #include <iostream>
+	
 #include <fstream>
+	
 using namespace std;
 
 int main(void)
+
 {
-	ofstream output("TEST.txt");
 
-	output << "Hello" << " " << "World" << " " << "20" << endl;
-	output << "Welcome" << " " << "CPP" << " " << "10" << endl;
+ofstream output("TEST.txt");
 
-	output.close();
+output << "Hello" << " " << "World" << " " << "20" << endl;
 
-	system("pause");
-	return 0;
+output << "Welcome" << " " << "CPP" << " " << "10" << endl;
+
+output.close();
+
+system("pause");
+
+return 0;
+
 }
+
 ================================================================
+
 ######Exercise16:字串處理(5月8號)
+
 老師上課內容
+
 ================================================================
+
 #include <iostream>
+	
 #include <string>
+	
 using namespace std;
 
+
 int main(void)
+
 {
+
   string str;
+  
   string str2="Welcome ";
+  
   string str3="print 10 and then 5 more";
 
-  str.append(str2);                       
-  str.append(str3,9,4);                   
-  str.append("dots are cool",9);          
-  str.append("here: ");                   
-  str.append(8u,'.');                    
+  str.append(str2);     
+  
+  str.append(str3,9,4);   
+  
+  str.append("dots are cool",9);      
+  
+  str.append("here: ");    
+  
+  str.append(8u,'.');    
+  
   str.append(str3.begin()+8,str3.end());  
+  
   str.append<int>(5,0x2E);                
 
   cout << str << '\n';
 
   return 0;
+  
 }
+
 ================================================================
+
 ######Exercise17:製作類別bmi(5月15號)
+
 老師上課內容
+
 ================================================================
 
 如何用類別輕鬆製作BMI測量:
