@@ -33,7 +33,7 @@ end()
 replace()
 
 find()
-
+{
 // C++ program to demonstrate various function string class
 #include <bits/stdc++.h>
 using namespace std;
@@ -142,4 +142,5 @@ int main()
     cout << str6 << endl;
  
     return 0;
+}
 }
