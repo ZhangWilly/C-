@@ -1,4 +1,5 @@
 ######Exercise1(4月10號)
+
 參考老師上課內容
 
 ================================================================
@@ -7,182 +8,330 @@
 using namespace std;
 
 int main()
+
 {
+
   const int NUMBER_OF_ELEMENTS = 5; //平均值的元素數量
+  
   double numbers[NUMBER_OF_ELEMENTS];
+  
   double sum = 0;
 
   for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
+  
   {
-    cout << "Enter a new number: ";
-    cin >> numbers[i];
-    sum += numbers[i];
+  
+   cout << "Enter a new number: ";
+    
+   cin >> numbers[i];
+   
+   sum += numbers[i];
+   
   }
 
   double average = sum / NUMBER_OF_ELEMENTS;
 
   int count = 0; // 這邊是要找高於平均值的數字數量
+  
   for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
-    if (numbers[i] > average)
-      count++;
+  
+   if (numbers[i] > average)
+    
+   count++;
 
   cout << "Average is " << average << endl;
+  
   cout << "Number of elements above the average " << count << endl;
+  
   system("pause");
+  
   return 0;
+  
 }
+
 平均數字跟高於平均值數量的程式碼
+
 ================================================================
+
 ######Exercise2(4月10號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include <iostream>
 
 using namespace std;
 
 int main()
+
 {
   const int NUMBER_OF_ELEMENTS = 5;
+  
   double numbers[NUMBER_OF_ELEMENTS];
+  
   double sum = 0;
 
   for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
+  
   {
-    cout << "Enter a new number: ";
-    cin >> numbers[i];
-    sum += numbers[i];
+  
+   cout << "Enter a new number: ";
+    
+   cin >> numbers[i];
+    
+   sum += numbers[i];
+    
   }
 
   double average = sum / NUMBER_OF_ELEMENTS;
 
   int count = 0; // The number of elements above average
+  
   for (int i = 0; i < NUMBER_OF_ELEMENTS; i++)
-    if (numbers[i] > average)
-      count++;
+  
+   if (numbers[i] > average)
+    
+   count++;
 
   cout << "Average is " << average << endl;
+  
   cout << "Number of elements above the average " << count << endl;
+  
   system("pause");
+  
   return 0;
+  
 }
+
 平均數字跟高於平均值數量還有加上平方過後的平均數字跟高於平方平均後數字的數量的程式碼
+
 ================================================================
+
 ######Exercise3(4月17號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include <iostream>
+	
 using namespace std;
+
 int main()
+
 {
-	int math,matha[10];
 
-	for(math=0;math<10;math++)
-		matha[math]=math;
+int math,matha[10];
 
-	for(math=0;math<10;math++)
-		cout << matha[math] << endl;
+for(math=0;math<10;math++)
+
+matha[math]=math;
+
+for(math=0;math<10;math++)
+	
+cout << matha[math] << endl;
 		
-    return 0;
-}
+return 0;
+    
 用迴圈把數字存入matha陣列中並印出
+
 ================================================================
+
 ######Exercise4(4月17號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include <iostream>
+	
 #include <iomanip>
+	
 using namespace std;
+
 int fun(int array[3][3])
+
 {
-	int i,j,t;
-	for(i=0;i<3;i++)
-		for(j=0;j<i;j++)
-		{
-			t=array[i][j];
-			array[i][j]=array[j][i];
-			array[j][i]=t;
-		}
-		return 0;
+
+int i,j,t;
+	
+for(i=0;i<3;i++)
+	
+for(j=0;j<i;j++)
+		
+{
+
+t=array[i][j];
+	
+array[i][j]=array[j][i];
+	
+array[j][i]=t;
+	
 }
+
+return 0;
+
+}
+
 int main()
+
 {
-	int i,j;
-	int array[3][3]={{1,2,3},{4,5,6},{7,8,9}};
-	cout << "Converted Front" <<endl;
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-			cout << setw(7) << array[i][j] ;
-		cout<< endl;
-	}
-	fun(array);
-	cout << "Converted result" <<endl;
-	for(i=0;i<3;i++)
-	{
-		for(j=0;j<3;j++)
-			cout << setw(7) << array[i][j] ;
-		cout<< endl;
-	}
-    return 0;
+
+int i,j;
+	
+int array[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+	
+cout << "Converted Front" <<endl;
+	
+for(i=0;i<3;i++)
+	
+{
+	
+for(j=0;j<3;j++)
+
+cout << setw(7) << array[i][j] ;
+
+cout<< endl;
+
 }
+	
+fun(array);
+
+cout << "Converted result" <<endl;
+
+for(i=0;i<3;i++)
+
+{
+
+for(j=0;j<3;j++)
+
+cout << setw(7) << array[i][j] ;
+
+cout<< endl;
+
+}
+
+   return 0;
+   
+}
+
 先印出陣列123456789,利用副函式 產生對角交換的功用
+
 ================================================================
+
 ######Exercise5(4月17號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include<iostream>
+	
 using namespace std;
+
 int main()
+
 {
-	int i;
-	char array[12];
-	array[0]='a';
-	array[1]='b';
-	array[2]='b';
-	printf("%s\n",array);
-    return 0;
+
+int i;
+
+char array[12];
+
+array[0]='a';
+
+array[1]='b';
+
+array[2]='b';
+
+printf("%s\n",array);
+
+  return 0;
+    
 }
+
 字元陣列存了3個分別為abb後面宣告，輸出後只會顯示"abb"。
+
 ================================================================
+
 ######Exercise6(4月17號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include<iostream>
+	
 using namespace std;
+
 int main()
+
 {
-	int i;
-	char array[12]={'H','E','L','L','O',' ','W','O','R','L','D'};
-	for(i=0;i<12;i++)
-		cout<<array[i];
-	cout << endl;
-    return 0;
+
+int i;
+	
+char array[12]={'H','E','L','L','O',' ','W','O','R','L','D'};
+	
+for(i=0;i<12;i++)
+	
+cout<<array[i];
+		
+cout << endl;
+	
+   return 0;
+   
 }
+
 在原先的字元陣列裡面放入HELLO WORLD，並用迴圈把陣列裡的字元一個字元一個字元的輸出。
+
 ================================================================
+
 ######Exercise7(4月17號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include<iostream>
+	
 #include<string>
+	
 using namespace std;
+
 int main()
+
 {
-	char str1[30],str2[20];
-	cout<<"please input string1:"<< endl;
-	gets(str1);
-	cout<<"please input string2:"<<endl;
-	gets(str2);
+
+char str1[30],str2[20];
+	
+cout<<"please input string1:"<< endl;
+	
+gets(str1);
+	
+cout<<"please input string2:"<<endl;
+	
+gets(str2);
+	
 //	strcat(str1,str2);
-	cout <<"Now the string1 is:"<<endl;
-	puts(str1);
-    return 0;
+
+cout <<"Now the string1 is:"<<endl;
+	
+puts(str1);
+	
+   return 0;
+   
 }
+
 要求使用者輸入兩次字串，結果再顯示一次第一個字串。
+
 ================================================================
+
 ######Exercise8(5月1號)
+
 參考老師上課的內容
+
 ================================================================
+
 #include<iostream>
 using namespace std;
 int main()
