@@ -937,6 +937,302 @@ int main()
 ![END](/PIC/專案.png "END")
 
 ================================================================
-######Exercise18:
+
+######Exercise18:整數堆疊(5/22)
+
+參考老師上課內容
+
+================================================================
+
+整數堆疊
+
+1]定義 ==> StackOfIntegers.h
+
+#ifndef STACK_H
+
+#define STACK_H
+
+
+
+class StackOfIntegers
+
+{
+
+public:
+
+  StackOfIntegers();
+  
+  bool isEmpty() const;
+  
+  int peek() const;
+  
+  void push(int value);
+  
+  int pop();
+  
+  int getSize() const;
+  
+
+private:
+
+  int elements[100];
+  
+  int size;
+  
+};
+
+#endif
+
+[2]實作==> StackOfIntegers.cpp
+
+#include "StackOfIntegers.h"
+
+StackOfIntegers::StackOfIntegers()
+
+{
+
+  size = 0;
+  
+}
+
+bool StackOfIntegers::isEmpty() const
+
+{
+
+  return (size == 0);
+  
+}
+
+int StackOfIntegers::peek() const
+
+{
+
+  return elements[size - 1];
+  
+}
+
+
+void StackOfIntegers::push(int value)
+
+{
+
+  elements[size++] = value;
+  
+}
+
+int StackOfIntegers::pop()
+
+{
+
+  return elements[--size];
+}
+
+int StackOfIntegers::getSize() const
+
+{
+
+  return size;
+  
+}
+
+[3]使用==>TestStackOfIntegers.cpp
+
+#include <iostream>
+
+#include "StackOfIntegers.h"
+
+using namespace std;
+
+
+int main()
+
+{
+  StackOfIntegers stack;
+
+  for (int i = 0; i < 10; i++)
+  
+   stack.push(i);
+
+  while (!stack.isEmpty())
+  
+   cout << stack.pop() << " ";
+
+  return 0;
+  
+}
+
+##  End1:
+
+![END1](/PIC/sTAck1.png "END1")
+
+================================================================
+
+######Exercise19:整數+字串堆疊(5/22)
+
+參考老師上課內容
+
+================================================================
+
+字串+整數堆疊
+
+[1]定義+實作 ==> GenericStack.h
+
+#ifndef STACK_H
+
+#define STACK_H
+
+template<typename T>
+  
+class Stack
+  
+{
+  
+public:
+  
+  Stack();
+  
+  bool empty() const;
+  
+  T peek() const;
+  
+  void push(T value);
+  
+  T pop();
+  
+  int getSize() const;
+  
+
+private:
+
+  T elements[100];
+  
+  int size;
+  
+};
+
+template<typename T>
+  
+Stack<T>::Stack()
+  
+{
+  
+  size = 0;
+  
+}
+
+template<typename T>
+  
+bool Stack<T>::empty() const
+  
+{
+  
+  return (size == 0);
+  
+}
+
+template<typename T>
+  
+T Stack<T>::peek() const
+  
+{
+  
+  return elements[size - 1];
+  
+}
+
+template<typename T>
+  
+void Stack<T>::push(T value)
+  
+{
+
+  elements[size++] = value;
+  
+}
+
+template<typename T>
+  
+T Stack<T>::pop()
+  
+{
+  
+  return elements[--size];
+  
+}
+
+template<typename T>
+  
+int Stack<T>::getSize() const
+  
+{
+  
+  return size;
+  
+}
+
+#endif
+
+[2]使用==>TestGenericStack.cpp
+
+#include <iostream>
+  
+#include <string>
+  
+#include "GenericStack.h"
+  
+using namespace std;
+  
+
+int main()
+
+{
+
+  // Create a stack of int values
+  
+  Stack<int> intStack;
+  
+  for (int i = 0; i < 10; i++)
+                         
+   intStack.push(i);
+                         
+
+  while (!intStack.empty())
+  
+  cout << intStack.pop() << " ";
+    
+  cout << endl;
+  
+
+  // Create a stack of strings
+  
+  Stack<string> stringStack;
+  
+  stringStack.push("Chicago");
+  
+  stringStack.push("Denver");
+  
+  stringStack.push("London");
+  
+
+  while (!stringStack.empty())
+  
+   cout << stringStack.pop() << " ";
+    
+  cout << endl;
+  
+
+  return 0;
+  
+}
+
+##  End2:
+
+![END2](/PIC/sTAck2.png "END2")
+
+
+================================================================
+
+######Exercise20:
+
 
 ================================================================
