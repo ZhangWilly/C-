@@ -1458,7 +1458,54 @@ int main()
 
 ================================================================
 
-######Exercise24:
+######Exercise24:查詢檔案是否存在的程式碼(6/5)
 
+老師上課內容
+
+================================================================
+
+
+
+#include <iostream>
+	
+#include <fstream>
+	
+#include <string>
+	
+using namespace std;
+	
+
+int main()
+
+{
+
+  string filename;
+  
+  cout << "Enter a file name: ";
+  
+  cin >> filename;
+  
+
+  ifstream input(filename.c_str());
+  
+  if (input.fail())
+  
+   cout << filename << " does not exist" << endl;
+    
+  else
+  
+   cout << filename << " exists" << endl;
+
+  return 0;
+  
+}
+
+##  fail2:
+
+![fail2](/PIC/fail2.png "fail2")
+
+================================================================
+
+######Exercise25:
 
 ================================================================
