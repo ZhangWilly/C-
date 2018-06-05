@@ -1409,11 +1409,11 @@ int main()
   
   {
   
-    cout << "File does not exist" << endl;
+   cout << "File does not exist" << endl;
     
-    cout << "Exit program" << endl;
+   cout << "Exit program" << endl;
     
-    return 0;
+   return 0;
     
   }
 
@@ -1428,9 +1428,9 @@ int main()
   
   {
   
-    cout << number << " "; // Display data
-    
-    sum += number;
+   cout << number << " "; // Display data
+   
+   sum += number;
     
   }
   
