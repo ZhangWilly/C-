@@ -1232,7 +1232,233 @@ int main()
 
 ================================================================
 
-######Exercise20:
+######Exercise20:檔案的輸入(6/5)
+
+老師上課內容
+
+================================================================
+
+#include <iostream>
+
+#include <fstream>
+
+using namespace std;
+
+int main()
+
+{
+
+  ofstream output;
+  
+
+  // Create a file
+  
+  output.open("d:///scores.txt");
+
+  // Write two lines
+  
+  output << "John" << " " << "T" << " " << "Smith" 
+  
+   << " " << 90 << endl;
+    
+  output << "Eric" << " " << "K" << " " << "Jones" 
+  
+   << " " << 85 << endl;
+    
+  output << "中文" << " " << "也" << " " << "可以" 
+  
+   << " " << 100 << endl;
+  
+  output << "NTOU" << " " << "絕對" << " " << "通過" 
+  
+   << " " << 1000 << endl; 
+    
+  output.close();
+
+  cout << "Done" << endl;
+
+  return 0;
+  
+}
+
+##  PUT:
+
+![PUT](/PIC/PUT1.png "PUT")
+
+================================================================
+
+######Exercise21:檔案的輸出(6/5)
+
+老師上課內容
+
+================================================================
+
+#include <iostream>
+  
+#include <fstream>
+  
+#include <string>
+  
+using namespace std;
+  
+
+int main()
+
+{
+
+  ifstream input("d:/// scores.txt");
+
+  // Read data
+  
+  string firstName;
+  
+  char mi;
+  
+  string lastName;
+  
+  int score;
+  
+  input >> firstName >> mi >> lastName >> score;
+  
+  cout << firstName << " " << mi << " " << lastName << " "
+  
+   << score << endl;
+
+  input >> firstName >> mi >> lastName >> score;
+  
+  cout << firstName << " " << mi << " " << lastName << " "
+  
+   << score << endl;
+
+ input >> firstName >> mi >> lastName >> score;
+ 
+  cout << firstName << " " << mi << " " << lastName << " "
+  
+   << score << endl;
+    
+   input >> firstName >> mi >> lastName >> score;
+     
+  cout << firstName << " " << mi << " " << lastName << " "
+  
+   << score << endl;
+    
+  input.close();
+
+  cout << "Done" << endl;
+
+  return 0;
+  
+}
+
+##  out:
+
+![out](/PIC/out1.png "out")
+
+================================================================
+
+######Exercise22:如何把檔案存取到C槽(6/5)
+
+老師上課內容
+
+================================================================
+
+首先，先以系統管理員的身分開啟命令提示字元:
+
+## OK:
+
+![OK](/PIC/正確1.png "OK")
+
+再來輸入CPP程式碼的存放位置，以系統管理員的身分開啟，接著執行便可在C槽新增檔案:
+
+##  OK2:
+
+![OK2](/PIC/正確2.png "OK2")
+
+接著也可以讀取到C槽的檔案了:
+
+##  OK3:
+
+![OK3](/PIC/正確3.png "OK3")
+
+================================================================
+
+######Exercise23:偵測檔案FAIL(6/5)
+
+老師上課內容
+
+================================================================
+
+#include <iostream>
+	
+#include <fstream>
+	
+using namespace std;
+	
+
+int main()
+
+{
+
+  // Open a file
+  
+  ifstream input("d:///score.txt");
+  
+  // 檢查檔案是否存在==>使用fail()
+  
+  if (input.fail())
+  
+  {
+  
+    cout << "File does not exist" << endl;
+    
+    cout << "Exit program" << endl;
+    
+    return 0;
+    
+  }
+
+  double sum = 0;
+  
+  double number;
+  
+  
+  //參看課本不同做法與錯誤分析
+  
+  while (input >> number) // Read data to the end of file
+  
+  {
+  
+    cout << number << " "; // Display data
+    
+    sum += number;
+    
+  }
+  
+  //
+  
+  input.close();
+
+  cout << "\nTotal is " << sum << endl;
+
+  return 0;
+  
+}
+
+輸入正確時:
+
+##  fail:
+
+![fail](/PIC/fail.png "fail")
+
+輸入錯誤時:
+
+##  failno:
+
+![failno](/PIC/failfail.png "failno")
+
+================================================================
+
+######Exercise24:
 
 
 ================================================================
