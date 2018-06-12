@@ -1506,6 +1506,57 @@ int main()
 
 ================================================================
 
-######Exercise25:
+######Exercise25:如何格式化輸出(6/12)
+
+老師上課內容
+
+================================================================
+
+
+
+#include <iostream>
+	
+#include <iomanip>
+	
+#include <fstream>
+	
+using namespace std;
+
+int main()
+
+{
+
+  ofstream output;
+
+  // Create a file
+  
+  output.open("formattedscores.txt");
+
+  // Write two lines 以下可以控制空格的數量
+  
+  output << setw(12) << "John" << setw(7) << "T" << setw(8) << "Smith"
+  
+   << " " << setw(4) << 90 << endl;    
+    
+  output << setw(6) << "Eric" << setw(4) << "K" << setw(5) << "Jones"
+  
+   << " " << setw(9) << 85;
+    
+
+  output.close();
+
+  cout << "Done" << endl;
+
+  return 0;
+  
+}
+
+##  格式化:
+
+![格式化](/PIC/格式化.png "格式化")
+
+================================================================
+
+######Exercise26:
 
 ================================================================
