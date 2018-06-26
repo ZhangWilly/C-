@@ -1,0 +1,408 @@
+父類別GeometricObject.cpp
+
+#include "GeometricObject.h"
+
+________::GeometricObject()
+
+{
+
+  color = "white";
+  
+  filled = false;
+  
+}
+
+________::GeometricObject(const string& color, bool filled)
+
+{
+
+  this->color = ________;
+  
+  ________->filled = filled;
+  
+}
+
+________ GeometricObject::getColor() const
+
+{
+
+  return ________;
+  
+}
+
+________ GeometricObject::setColor(const string& color)
+
+{
+
+  ________ = color;
+  
+}
+
+________ GeometricObject::isFilled() const
+
+{
+
+  return ________;
+  
+}
+
+________ GeometricObject::setFilled(bool filled)
+
+{
+
+  ________ = filled;
+  
+}
+
+________ ________::toString() const
+
+{
+
+  return "Geometric Object";
+  
+}
+
+.....................................................................................
+
+子類別:DerivedRectangle 繼承 父類別:GeometricObject
+
+#include "DerivedRectangle.h"
+
+// Construct a default rectangle object
+
+Rectangle::Rectangle()
+
+{
+
+  width = 1;
+  
+  height = 1;
+  
+}
+
+// Construct a rectangle object with specified width and height
+
+Rectangle::Rectangle(double width, double height)
+
+{
+
+  setWidth(________);
+  
+  setHeight(________);
+  
+}
+
+Rectangle::Rectangle(double width, double height, const string& color, bool filled)
+
+{
+
+  setWidth(________);
+  
+  setHeight(________);
+  
+  setColor(________);
+  
+  setFilled(________);
+  
+}
+
+// Return the width of this rectangle
+
+double Rectangle::getWidth() const
+
+{
+
+  return ________;
+  
+}
+
+// Set a new radius
+
+void Rectangle::setWidth(double width)
+
+{
+
+  this->width = ________;
+  
+}
+
+// Return the height of this rectangle
+
+double Rectangle::getHeight() const
+
+{
+
+  return________;
+  
+}
+
+// Set a new height
+
+void Rectangle::setHeight(double height)
+
+{
+
+  this->height = ________;
+  
+}
+
+// Return the area of this rectangle
+
+double Rectangle::getArea() const
+
+{
+
+  return ________;
+  
+}
+
+// Return the perimeter of this rectangle
+
+double Rectangle::getPerimeter() const
+
+{
+
+  return ________;
+  
+}
+
+// Redefine the toString function, to be covered in Section 15.5
+
+string Rectangle::toString() const
+
+{
+
+  return "Rectangle object";
+  
+}
+
+.....................................................................................
+
+寫下DerivedRectangle.h
+
+#ifndef RECTANGLE_H
+
+#define RECTANGLE_H
+
+#________ "GeometricObject.h"
+
+________ Rectangle: ________ GeometricObject
+{
+
+________:
+
+  Rectangle();
+  
+  Rectangle(_______,_________);
+  
+  Rectangle(_______,_________,_________,_____);
+  
+  double _________ const;
+  
+  void _________;
+  
+  double _________ const;
+  
+  void _________(double);
+  
+  double _________const;
+  
+  double _________ const;
+  
+  string toString() const;
+
+ _________:
+ 
+  _________ width;
+  
+  _________ height;
+  
+};  // Must place semicolon here
+
+#endif
+
+.....................................................................................
+
+==>子類別:Circle 繼承 父類別:GeometricObject
+
+#include "DerivedCircle.h"
+
+// Construct a default circle object
+
+________::Circle()
+
+{
+
+  radius = 1;
+  
+}
+
+// Construct a circle object with specified radius
+
+Circle::Circle(double radius)
+
+{
+
+  setRadius(________);
+  
+}
+
+// Construct a circle object with specified radius,
+
+//  color and filled values
+
+Circle::Circle(double radius, const string& color, bool filled)
+
+{
+
+  ________ = radius;
+  
+  setColor(color);
+  
+  setFilled(filled);
+  
+}
+
+// Return the radius of this circle
+
+double Circle::getRadius() const
+
+{
+
+  return ________;
+  
+}
+
+// Set a new radius
+
+void Circle::setRadius(double radius)
+
+{
+
+  this->radius = ________;
+  
+}
+
+// Return the area of this circle
+
+double Circle::getArea() const
+
+{
+
+  return ________ * 3.14159;
+  
+}
+
+// Return the perimeter of this circle
+
+double Circle::getPerimeter() const
+
+{
+
+  return ________ * 3.14159;
+  
+}
+
+// Return the diameter of this circle
+
+double Circle::getDiameter() const
+
+{
+
+  return ________;
+  
+}
+
+// Redefine the toString function
+
+string ________::toString() const
+
+{
+
+  return "Circle object";
+  
+}
+
+.....................................................................................
+
+主測試程式:TestGeometricObject.cpp
+
+#________ "GeometricObject.h"
+
+#________ "DerivedCircle.h"
+
+#________ "DerivedRectangle.h"
+
+#________ <iostream>
+
+
+________ namespace std;
+
+
+________ main()
+
+{
+
+//建立一個GeometricObject物件顏色(color)為red,有填
+
+  GeometricObject shape;
+  
+  shape.setColor("________");
+  
+  shape.setFilled(________);
+  
+  cout << shape.toString() << endl
+  
+    << " color: " << shape.________
+    
+    << " filled: " << (shape.________? "true" : "false") << endl; 
+    
+
+//建立一個Circle物件半徑為11,顏色為black,沒填
+
+  ________ circle(________);
+  
+  circle.setColor(________);
+  
+  circle.setFilled(________);
+  
+  cout << circle.toString()<< endl
+  
+    << " color: " << circle.________
+    
+    << " filled: " << (circle.________ ? "true" : "false") 
+    
+    << " radius: " << circle.________
+    
+    << " area: " << circle.________
+    
+    << " perimeter: " << circle.getPerimeter() << endl;
+    
+
+//建立一個Rectangle物件,顏色為orange,有填
+
+  ________ rectangle(2, 3);
+  
+  rectangle.setColor("________");
+  
+  rectangle.setFilled(________);
+  
+  cout << rectangle.toString()<< endl
+  
+    << " color: " << circle.________
+    
+    << " filled: " << (circle.________ ? "true" : "false") 
+    
+    << " width: " << rectangle.________
+    
+    << " height: " << rectangle.________
+    
+    << " area: " << rectangle.________
+    
+    << " perimeter: " << rectangle.________ << endl;
+    
+
+  return 0;
+  
+}
+.....................................................................................
