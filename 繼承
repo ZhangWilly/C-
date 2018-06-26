@@ -1,3 +1,6 @@
+參考網址: https://github.com/MyDearGreatTeacher/CPP/blob/master/20180619/ch15_InheritanceAndPolymorphism.md
+
+
 父類別GeometricObject.cpp
 
 #include "GeometricObject.h"
@@ -54,9 +57,11 @@ ________ GeometricObject::setFilled(bool filled)
   
 }
 
-________ ________::toString() const
+ ________ ________::toString() const
 
 {
+
+
 
   return "Geometric Object";
   
